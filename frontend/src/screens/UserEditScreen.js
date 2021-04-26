@@ -6,7 +6,7 @@ import FormContainer from '../components/FormContainer';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { Link } from 'react-router-dom';
-import { USER_UPDATE_RESET } from '../constants/userConstants';
+import { USER_DETAILS_RESET, USER_UPDATE_RESET } from '../constants/userConstants';
 
 const UserEditScreen = ({ match, history }) => {
 	const userId = match.params.id;
@@ -25,6 +25,7 @@ const UserEditScreen = ({ match, history }) => {
 	useEffect(() => {
 		if (successUpdate) {
 			dispatch({ type: USER_UPDATE_RESET });
+            dispatch({ type: USER_DETAILS_RESET });
 			history.push('/admin/userlist');
 		} else {
 			if (!user.name || user._id !== userId) {
