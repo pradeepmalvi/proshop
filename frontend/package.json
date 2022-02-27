@@ -1,6 +1,6 @@
 {
 	"name": "frontend",
-	"proxy": "http://127.0.0.1:5000",
+	"proxy": "http://ec2-18-222-197-127.us-east-2.compute.amazonaws.com:5000",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
